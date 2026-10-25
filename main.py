@@ -5,8 +5,19 @@ print(" " * 15 + "Hello, Welcome" + " " * 15)
 print()
 print()
 print()
+try:
+    money = int(input("Enter the investment amount: "))
+except:
+    print("An error occurred; please try again.")
 
-money = int(input("Enter the investment amount: "))
+while money <= 0:
+    print("""
+               Error!!!! 
+    Your monetary value cannot be less than zero.
+
+    """)
+    money = int(input("Enter the investment amount: "))
+
 while money > 0:
     
     print('''please select in time
@@ -35,46 +46,4 @@ while money > 0:
         
     else:
         print("Time not found")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
